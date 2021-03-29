@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>nunuStudio</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	</head>
+
+	<body style="background-color: #000000" onload="run();" onresize="resize();" oncontextmenu="return false;">
+		<!--nunuStudio lib-->
+		<script type="text/javascript" src="nunu.min.js"></script>
+
+		<!--App code-->
+		<script type="text/javascript">
+			var app;
+
+			//Initialize app
+			function run()
+			{	
+				//Create app object
+				app = new NunuApp();
+
+				//Onload enable the vr and fullscreen buttons
+
+				//On progress callback
+
+				//Load and run nunu app
+				app.loadRunProgram("app_particle.nsp");
+			}
+
+			//Resize nunu app (must be called every time the window is resized)
+			function resize()
+			{
+				app.resize();
+			}
+
+			//Toggle fullscreen mode
+			function toggleFullscreen()
+			{
+				app.toggleFullscreen(document.body);
+			}
+
+			//Toggle VR mode
+			function toggleVR()
+			{
+				app.toggleVR();
+			}
+		</script>
+	</body>
+</html>
